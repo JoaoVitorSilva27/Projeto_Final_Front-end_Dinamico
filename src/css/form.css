@@ -1,0 +1,179 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estilos para o contêiner do formulário */
+.form {
+    background-color: #ffffff0c;
+    border: 1px solid #50246d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    
+}
+
+/* Estilos para o cabeçalho */
+h1 {
+    color: #f7f7f7;
+}
+
+/* Estilos para os rótulos dos campos */
+label {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* Estilos para os campos de entrada de texto */
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para o botão de login */
+button[type="submit"] {
+    background-color: #50246d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Estilos para o link de registro */
+a {
+    display: block;
+    margin-top: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Estilos para o link de registro em hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 600px) {
+    .form {
+        width: 80%;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    label {
+        font-size: 16px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        font-size: 16px;
+    }
+    button[type="submit"] {
+        font-size: 16px;
+    }
+    a {
+        font-size: 16px;
+    }
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+  }
+  
+  .waveWrapper {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+  
+  .waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: 1px;
+    background-image: linear-gradient(to top, #38233f 20%, #27273c 80%);
+  }
+  
+  .bgTop {
+    z-index: 15;
+    opacity: 0.5;
+  }
+  
+  .bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+  }
+  
+  .bgBottom {
+    z-index: 5;
+  }
+  
+  .wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+  }
+  
+  .waveTop {
+    background-size: 50% 100px;
+  }
+  
+  .waveAnimation .waveTop {
+    animation: move-wave 3s;
+    -webkit-animation: move-wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  .waveMiddle {
+    background-size: 50% 120px;
+  }
+  
+  .waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+  }
+  
+  .waveBottom {
+    background-size: 50% 100px;
+  }
+  
+  .waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+  }
+  

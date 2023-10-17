@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Área do Usuário</title>
+    <script src="../javascript/user.js"></script>
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+
+<body>
+    <h1>Área do Usuário</h1>
+    <button id="logout-button" class="butao">Logout</button>
+    <h2>Criação de Tarefas</h2>
+    <form id="task-form">
+        <label for="task-name">Nome da Tarefa:</label>
+        <input type="text" id="task-name" required>
+        <label for="task-description">Descrição:</label>
+        <input type="text" id="task-description">
+        <label for="task-due-date">Prazo:</label>
+        <input type="date" id="task-due-date" required>
+        <button type="submit" class="butao">Criar Tarefa</button>
+    </form>
+    <h2>Lista de Tarefas</h2>
+    <ul id="task-list" class="task-card">
+        <!-- Tarefas serão adicionadas aqui dinamicamente -->
+    </ul>
+</body>
+
+</html>
