@@ -13,7 +13,7 @@
   .waveWrapper {
     z-index: -1;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;

@@ -1,11 +1,5 @@
-/* Reset em alguns elementos */
-html,
-body,
-h1,
-h2,
-p,
-ul,
-li {
+/* Estilos padrão */
+* {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -13,9 +7,8 @@ li {
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, blue);
-  background-size: 400% 100%;
-  animation: gradientAnimation 10s infinite alternate;
+  background-size: cover;
+  background-color: #27273c;
   color: #fff;
   display: flex;
   min-height: 100vh;
@@ -24,44 +17,40 @@ body {
   padding: 0;
 }
 
-.container {
+.container,
+.container2 {
   flex: 1;
-  margin: 20px;
+  margin: 20px 20px;
 }
 
 .container2 {
-  flex: 1;
   margin-top: 15px;
   padding-top: 15px;
 }
 
-#hello {
-  margin: 20px;
-  font-size: 20px;
+#hello,
+h1,
+h2 {
+  margin: 20px 0;
 }
 
 h1 {
   font-size: 24px;
-  margin: 20px;
 }
 
 h2 {
   font-size: 20px;
-  margin: 10px;
+  margin: 10px 0;
 }
 
-.button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #555;
+.container2 h2{
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #50246d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 20px;
 }
 
 form {
@@ -80,6 +69,7 @@ label {
   margin-top: 10px;
 }
 
+input,
 input[type="text"],
 input[type="date"] {
   width: 95%;
@@ -89,64 +79,103 @@ input[type="date"] {
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  background-color: #222222;
-  padding: 50px;
-  margin: px;
+ul li {
+  background-color: #1d1d1d96;
+  border: 1px solid #8b44bb;
+  padding: 40px;
+  margin: 85px;
+  max-width: 300px;
   border-radius: 20px;
   text-align: left;
-}
-
-.task-card {
-  margin: 10px 0;
-
-}
-
-.task-card h5 {
-  font-size: 20px;
-  margin: 0;
-}
-
-.task-card p {
   font-size: 16px;
-  margin: 10px 0;
+  backdrop-filter: blur(2px);
 }
 
-.task-card input[type="text"],
-.task-card input[type="date"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.task-card button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.task-card button:hover {
-  background-color: #555;
-}
-
-
-/* Estilos para o botão de login */
-.butao {
+.button,
+.save-button,
+.cancel-button,
+.complete-button,
+.edit-button,
+.delete-button,
+.undo-complete-button {
   background-color: #50246d;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin-top: 15px;
+  margin: 15px 0;
+}
+
+.save-button,
+.cancel-button,
+.complete-button:hover {
+  background-color: #8b44bb;
+}
+
+.edit-button,
+.delete-button,
+.undo-complete-button {
+  margin-right: 10px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+  }
+
+  .container,
+  .container2 {
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+  }
+
+  .button,
+  .save-button,
+  .cancel-button,
+  .complete-button {
+    padding: 8px 16px;
+    margin: 5px 0;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
 }

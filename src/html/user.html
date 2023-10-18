@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tarefas</title>
     <link rel="stylesheet" href="../css/task.css">
     <link rel="stylesheet" href="../css/bga.css">
     <script src="../javascript/user.js" defer></script>
@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <h1>Área do Usuário</h1>
-        <div id="hello"></div>
+        <div id="datas"></div>
         <button id="logout-button" class="button">Logout</button>
         
         <form id="task-form">
@@ -26,8 +26,10 @@
             <input type="date" id="task-due-date" required>
             <button type="submit" class="button">Criar Tarefa</button>
         </form>
+        <div id="clean">
+          <button id="clear-completed-button" class="button">Limpar Concluídas</button>
+        </div>
     </div>
-
     <div class="container2">
         <h2>Lista de Tarefas Pendentes</h2>
 
@@ -38,7 +40,6 @@
         <ul id="task-list-complete">
             <!-- Tarefas concluídas serão adicionadas aqui dinamicamente -->
         </ul>
-        <button id="clear-completed-button" class="button">Limpar Concluídas</button>
     </div>
 
     <div class="waveWrapper waveAnimation">

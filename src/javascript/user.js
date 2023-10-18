@@ -11,9 +11,37 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = './login.html';
     }
 
-    const msghello = document.getElementById('hello')
-    msghello.innerText = `Ola ${loggedInUser}, bora ver suas tarefas!`
+// funcao para mostrar hora
+function carregar () {
+    const msgdata = document.getElementById('datas')
+    let data = new Date()
+    let dia = data.getDay()
+    let mes = data.getMonth()
+    let ano = data.getFullYear()
 
+    let hora = data.getHours()
+    let min = data.getMinutes()
+    if (min < 10) {
+        min = "0"+min
+    }
+
+    if (hora >= 0 && hora < 13) { //bom dia
+        msgdata.innerText = `Bom dia ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} , já pegue sua xícara de café, o dia só está começando!`
+        
+    } else if (hora >= 13 && hora <19) { //boa tarde
+        msgdata.innerText = `Boa tarde ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} ,não deixe aquele soninho da tarde te pegar, matenha-se focado nos afazeres!`
+        
+    } else {//boa noite
+        msgdata.innerText = `Boa noite ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} , lembre-se de não ficar acordado até tarde, pois uma boa noite de sono é fundamental para sua produtividade!`
+    }
+}
+
+setInterval(() => {
+    carregar()
+  }, 1000)
+
+//
+    
     // Adiciona o evento de clique ao botão de logout
     logoutButton.addEventListener('click', function () {
         localStorage.removeItem('loggedInUser');
