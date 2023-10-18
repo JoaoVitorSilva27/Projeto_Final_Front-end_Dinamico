@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = './login.html';
     }
 
+    const msghello = document.getElementById('hello')
+    msghello.innerText = `Ola ${loggedInUser}, bora ver suas tarefas!`
+
     // Adiciona o evento de clique ao botão de logout
     logoutButton.addEventListener('click', function () {
         localStorage.removeItem('loggedInUser');

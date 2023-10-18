@@ -1,132 +1,152 @@
-/* Reset some default styles */
-html, body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-size: cover;
-    background-position: center;
-    background-color: #252525fa; /* Cor de fundo para substituir a imagem */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    position: relative;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin: 20px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin: 10px;
-  }
-  
-  .button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  form {
-    width: 500px;
-    padding: 20px;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.281);
-    backdrop-filter: blur(5px);
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  
-  input[type="text"],
-  input[type="date"] {
-    width: 95%;
-    padding: 8px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #222222;
-    padding: 50px;
-    margin: px;
-    border-radius: 20px;
-    text-align: left;
-  }
-  
-  .task-card {
-    margin: 10px 0;
+/* Reset em alguns elementos */
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  }
-  
-  .task-card h5 {
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  .task-card p {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
-  .task-card input[type="text"], 
-  .task-card input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .task-card button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .task-card button:hover {
-    background-color: #555;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, blue);
+  background-size: 400% 100%;
+  animation: gradientAnimation 10s infinite alternate;
+  color: #fff;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  flex: 1;
+  margin: 20px;
+}
+
+.container2 {
+  flex: 1;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+#hello {
+  margin: 20px;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+form {
+  width: 500px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #50246d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #222222;
+  padding: 50px;
+  margin: px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.task-card {
+  margin: 10px 0;
+
+}
+
+.task-card h5 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.task-card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.task-card input[type="text"],
+.task-card input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-card button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-card button:hover {
+  background-color: #555;
+}
 
 
 /* Estilos para o botão de login */
 .butao {
-    background-color: #50246d;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 15px;
+  background-color: #50246d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 15px;
 }

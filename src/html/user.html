@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/task.css">
+    <link rel="stylesheet" href="../css/bga.css">
+    <script src="../javascript/user.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <h1>Área do Usuário</h1>
-        <button id="logout-button">Logout</button>
-        <h2>Criação de Tarefas</h2>
+        <div id="hello"></div>
+        <button id="logout-button" class="button">Logout</button>
+        
         <form id="task-form">
+            <h2>Criação de Tarefas</h2>
             <label for="task-name">Nome da Tarefa:</label>
             <input type="text" id="task-name" required>
             <label for="task-description">Descrição:</label>
             <input type="text" id="task-description">
             <label for="task-due-date">Prazo:</label>
             <input type="date" id="task-due-date" required>
-            <button type="submit">Criar Tarefa</button>
+            <button type="submit" class="button">Criar Tarefa</button>
         </form>
+    </div>
+
+    <div class="container2">
         <h2>Lista de Tarefas Pendentes</h2>
+
         <ul id="task-list">
             <!-- Tarefas serão adicionadas aqui dinamicamente -->
         </ul>
@@ -28,8 +38,20 @@
         <ul id="task-list-complete">
             <!-- Tarefas concluídas serão adicionadas aqui dinamicamente -->
         </ul>
-        <button id="clear-completed-button">Limpar Concluídas</button>
+        <button id="clear-completed-button" class="button">Limpar Concluídas</button>
     </div>
-    <script src="../javascript/user.js"></script>
+
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+          <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+          <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+          <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+        </div>
+      </div>
 </body>
+
 </html>
