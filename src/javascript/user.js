@@ -239,6 +239,7 @@ setInterval(() => {
                 <strong>Nome:</strong> ${task.name}<br>
                 <strong>Descrição:</strong> ${task.description}<br>
                 <strong>Prazo:</strong> ${task.dueDate}<br>
+                <strong>Estado:</strong> ${task.state}<br>
                 <button data-id="${index}" class="complete-button"><i class="fa-regular fa-square-check"></i>Concluir</button>
                 <div class="espace2"></div>
                 <button data-id="${index}" class="edit-button"><i class="fa-solid fa-pen"></i>Editar</button>
