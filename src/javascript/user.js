@@ -10,38 +10,55 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Você precisa fazer login para acessar esta área.');
         window.location.href = './login.html';
     }
-
-// funcao para mostrar hora
-function carregar () {
-    const msgdata = document.getElementById('datas')
-    let data = new Date()
-    let dia = data.getDay()
-    let mes = data.getMonth()
-    let ano = data.getFullYear()
-
-    let hora = data.getHours()
-    let min = data.getMinutes()
-    if (min < 10) {
-        min = "0"+min
+    enquote = 0
+    function getQuote() {
+        fetch('https://stoic-quotes.com/api/quote')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na solicitação da API');
+                }
+                return response.json();
+            })
+            .then(data => {
+                enquote = data.text
+            })
+        console.log(enquote)
     }
 
-    if (hora >= 0 && hora < 13) { //bom dia
-        msgdata.innerText = `Bom dia ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} , já pegue sua xícara de café, o dia só está começando!`
-        
-    } else if (hora >= 13 && hora <19) { //boa tarde
-        msgdata.innerText = `Boa tarde ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} ,não deixe aquele soninho da tarde te pegar, matenha-se focado nos afazeres!`
-        
-    } else {//boa noite
-        msgdata.innerText = `Boa noite ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} , lembre-se de não ficar acordado até tarde, pois uma boa noite de sono é fundamental para sua produtividade!`
+    // funcao para mostrar hora
+    function carregar() {
+        if (enquote == 0) { 
+            getQuote() 
+        }
+        const msgdata = document.getElementById('datas')
+        let data = new Date()
+        let dia = data.getDay()
+        let mes = data.getMonth()
+        let ano = data.getFullYear()
+
+        let hora = data.getHours()
+        let min = data.getMinutes()
+        if (min < 10) {
+            min = "0" + min
+        }
+
+        if (hora >= 0 && hora < 13) { //bom dia
+            msgdata.innerText = `Bom dia ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min}. O seu dia será motivado pelo seguinte pensamento estoico: ${enquote}`
+
+        } else if (hora >= 13 && hora < 19) { //boa tarde
+            msgdata.innerText = `Boa tarde ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são${hora}:${min}. O seu dia será motivado pelo seguinte pensamento estoico: ${enquote}`
+
+        } else {//boa noite
+            msgdata.innerText = `Boa noite ${loggedInUser}, bora ver suas tarefas! Hoje é ${dia}/${mes}/${ano} e agora são ${hora}:${min} . O seu dia será motivado pelo seguinte pensamento estoico: ${enquote}`
+        }
     }
-}
 
-setInterval(() => {
-    carregar()
-  }, 1000)
+    setInterval(() => {
+        carregar()
+    }, 1000)
 
-//
-    
+    //
+
     // Adiciona o evento de clique ao botão de logout
     logoutButton.addEventListener('click', function () {
         localStorage.removeItem('loggedInUser');
