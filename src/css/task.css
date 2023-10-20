@@ -91,7 +91,7 @@ input[type="date"] {
 ul li {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid #8b44bb;
-  padding: 40px;
+  padding: 30px;
   margin: 50px;
   border-radius: 20px;
   text-align: left;
@@ -125,7 +125,7 @@ ul li {
 .edit-button,
 .delete-button,
 .undo-complete-button {
-  margin-right: 10px;
+  margin-top: 20px;
 }
 
 i {
@@ -191,4 +191,8 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+.tasknamee {
+  font-size: 30px;
 }
